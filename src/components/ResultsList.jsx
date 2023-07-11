@@ -31,13 +31,13 @@ const ResultsList = ({ searchLocation }) => {
     }
 
 
-    return <div id="list-container">
+    return <section id="list-container">
         <ul>
             {topResults.map((meteor) => {
                 return < MeteorCard key={meteor.id} meteor={meteor} />
             })}
         </ul>
-    </div>
+    </section>
 }
 
 export default ResultsList

@@ -9,23 +9,14 @@ import './App.css'
 function App() {
   const [searchLocation, setSearchLocation] = useState("")
   return (
-    <div id="app-container">
+    <main id="app-container">
       < Header />
-      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={[51.505, -0.09]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
-      </MapContainer>
-      < InfoBar searchLocation={searchLocation} />
-      < ResultsList searchLocation={searchLocation} />
+      <section id="results-container">
+        < InfoBar searchLocation={searchLocation} />
+        < ResultsList searchLocation={searchLocation} />
+      </section>
       < SearchBar setSearchLocation={setSearchLocation} />
-    </div>
+    </main>
   )
 }
 

@@ -9,13 +9,13 @@ const SearchBar = ({ setSearchLocation }) => {
         setSearchLocation(newLocation)
     }
 
-    return <div id="searchbar-container">
+    return <section id="searchbar-container">
         <form onSubmit={handleSubmit}>
             <label htmlFor="search-input">Location: </label>
             <input id="search-input" value={newLocation} onChange={event => setNewLocation(event.target.value)}></input>
             <button>Search</button>
         </form>
-    </div>
+    </section>
 }
 
 export default SearchBar
