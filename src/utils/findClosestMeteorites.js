@@ -2,8 +2,6 @@ const radius = 3963 // radius of Earth in miles
 
 const findClosestMeteorites = (meteors, coords) => {
 
-    console.log("findClosestMeteorites function called")
-
     const meteorsByDistance = meteors.map(meteor => {
         meteor.distance = calculateDistance(Number(meteor.reclat), Number(meteor.reclong), coords.lat, coords.lon)
         return meteor

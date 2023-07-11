@@ -7,29 +7,40 @@ import findClosestMeteorites from '../utils/findClosestMeteorites'
 const ResultsList = ({ searchLocation }) => {
     const [meteors, setMeteors] = useState([])
     const [coords, setCoords] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
+    const [isError, setIsError] = useState(false)
     let topResults = []
 
     useEffect(() => {
         getMeteors()
             .then(({ data }) => {
                 setMeteors(data)
+                setIsLoading(false)
+            })
+            .catch(err => {
+                setIsError(true)
             })
     }, [])
 
     useEffect(() => {
         if (searchLocation) {
-            console.log("getting coordinates....")
             getCoordinates(searchLocation)
                 .then(response => {
                     setCoords({ lat: Number(response.lat), lon: Number(response.lon) })
                 })
+                .catch(err => {
+                    setIsError(true)
+                })
         }
     }, [searchLocation])
+
+
+    if (isError) <p>Error!</p>
+    else if (isLoading) <p>Loading...</p>
 
     if (coords.lat) {
         topResults = findClosestMeteorites(meteors, coords)
     }
-
 
     return <section id="list-container">
         <ul>

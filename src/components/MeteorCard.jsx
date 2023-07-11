@@ -1,5 +1,6 @@
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet"
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
 import showMap from "../utils/showMap"
+import 'leaflet/dist/leaflet.css'
 
 const MeteorCard = ({ meteor }) => {
 
