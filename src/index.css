@@ -1,0 +1,97 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#app-container {
+  border: 2px solid black;
+  width: 50vw;
+  height: 90vh;
+  margin: auto
+}
+
+#header-container {
+  height: 18%;
+  border: 2px solid red;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+#infobar-container {
+  height: 8%;
+  border: 2px solid yellow;
+}
+
+#infobar-container p {
+  font-size: 1.2rem;
+}
+
+#list-container {
+  border: 2px solid green;
+  height: 62%;
+  width: 100%;
+  margin: auto;
+}
+
+.meteor-card {
+  background-color: rgb(152, 216, 157);
+  text-align: left;
+  margin: 10px;
+  padding: 5px 30px;
+}
+
+ul {
+  padding: 0;
+  margin: 10px 20px;
+  height: 95%;
+  overflow: auto;
+  border: 2px solid greenyellow;
+}
+
+li {
+  list-style: none;
+}
+
+#searchbar-container {
+  border: 2px solid blue;
+  height: 10%;
+  display: flex;
+}
+
+form {
+  height: 2rem;
+  margin: auto;
+}
+
+form * {
+  font-size: 1.1rem;
+  margin: 5px;
+}
+
+#map { height: 180px; }
+
+.leaflet-container {
+  height: 300px;
+  width: 300px;
+}
+
+#map { height: 180px; }
+
+.leaflet-container {
+  height: 300px;
+  width:300px;
+}
